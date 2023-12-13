@@ -1,0 +1,178 @@
+.app{
+    height: 100vh;
+    display: flex;
+    background-color: #082d8b;
+    color: #fff;
+}
+.main{
+    width: 75%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #080e40), url(./assets/bg.jpg) center;
+    display: flex;
+    flex-direction: column;
+
+}
+.top{
+    height: 50%;
+    position: relative;
+    
+}
+.bottom{
+    height: 50%;
+}
+.trivia{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.questions{
+    width: 80%;
+    background: linear-gradient(#1d419c,#000);
+    border: 2px solid white;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+    border-radius:10px;
+    font-size: 20px;
+}
+.answers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top:60px;
+   
+
+}
+.options{
+    width: 40%;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(blue,black);
+    border-radius: 10px;
+    border: 1px solid white;
+    margin: 0px 10px 20px 10px;
+    cursor: pointer;
+}
+.options:hover, .options.active{
+    background: rgb(27, 27, 216);
+}
+
+.options.correct{
+    animation:  correct 3s ease forwards;
+}
+@keyframes correct{
+    0%,22%,42%{
+        background: rgb(40, 17, 186);
+    }
+    20%,40%,60%{
+        background: linear-gradient(blue,black);
+    }
+    68%,100%{
+        background: green;
+    }
+}
+
+.options.wrong{
+    animation:  wrong 3s ease forwards;
+}
+@keyframes wrong{
+    0%,22%,42%{
+        background: rgb(40, 17, 186);
+    }
+    20%,40%,60%{
+        background: linear-gradient(blue,black);
+    }
+    68%,100%{
+        background: crimson;
+    }
+}
+
+.timer{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+}
+
+.ladder{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ladder .moneyLadder{
+    list-style: none;
+    width: 100%;
+    padding: 2em;
+}
+.moneyPrize{
+    display: flex;
+    align-items: center;
+    
+}
+.moneyPrize.active{
+    background-color: #1d419c;
+    border-radius: 5px;
+    padding: 5px;
+}
+.moneyListNumber{
+    font-size: 18px;
+    font-weight: 100;
+    width: 30%;
+}
+.wonText{
+    position: relative;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+    text-shadow: 10px 10px 10px #000;
+
+}
+
+.start{
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.startInput{
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.startInput:focus{
+    outline: none;
+}
+
+.startBtn{
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18;
+    font-weight: 200;
+}
